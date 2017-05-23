@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(ui->MT1_SpinBox, SIGNAL(valueChanged(int)),this,SLOT(update_overall(int)));
     QObject::connect(ui->MT2_SpinBox, SIGNAL(valueChanged(int)),this,SLOT(update_overall(int)));
     QObject::connect(ui->Final_SpinBox, SIGNAL(valueChanged(int)),this,SLOT(update_overall(int)));
+    QObject::connect(ui->comboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(update_overall(int)));
 }
 
 MainWindow::~MainWindow()
